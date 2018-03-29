@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#F4CF1F",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "装修设计施工",
+    "backgroundColor": "#262626",
+    "backgroundTextStyle": "dark"
+  }
+}

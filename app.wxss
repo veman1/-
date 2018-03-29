@@ -1,0 +1,15 @@
+
+page {
+  font-size: 26rpx;
+}
+
+.u-arrow-down {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAPCAYAAAD6Ud/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAApElEQVQ4ja3QSw7DIAxF0UuF0kWnTZrPEtlNB3RQkFxEqJ3wJshYekeyCyEAjMAdmOibBXgDu0/ILpa9sEV2eWAQyyfg0nsla9ExeGBOQ9YfAu2BbMDk0zADUaBnsSoC39PlvAR6BiuRVXT9QFewJlKDjjAnUDNyBNWwUaAyW/FXRVqQBlMj/6AWFi2IBmphakQL1TATYoFqmBqxQhmLwM2CAHwAOZUzaQ2P+JYAAAAASUVORK5CYII=);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.full-width {
+  width: 100%;
+}

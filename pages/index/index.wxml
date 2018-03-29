@@ -1,0 +1,32 @@
+<view class="g-header">
+  <view class="g-header__loc">
+    <text>{{ cityName }}</text>
+    <i class="u-arrow-down" />
+  </view>
+  <view class="g-header__search">
+    <view class="m-search">
+      <view class="m-search__cover">
+        <image src="/images/public_search.png" mode="aspectFit" />
+        <text>搜索</text>
+      </view>
+      <view class="m-search__input">
+        <input placeholder='搜索' maxlength='20' />
+        <btn>搜索</btn>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="g-slider">
+  <swiper class="m-slider" circular>
+    <block wx:for="{{ '    ' }}">
+      <swiper-item>
+        <image src="/images/test/ad.png" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class="g-services">
+  <image class="full-width" mode="widthFix" src="/images/public_services.png" />
+</view>
