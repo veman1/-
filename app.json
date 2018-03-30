@@ -1,6 +1,7 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/case_index/case_index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#F4CF1F",

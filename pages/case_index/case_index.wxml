@@ -1,0 +1,21 @@
+<view class="g-fixtop">
+  <view class="m-tabbar">
+    <view class="m-tabbar__item m-tabbar__item--current">套图</view>
+    <view class="m-tabbar__item">单图</view>
+  </view>
+</view>
+
+<view class="g-fixtop2">
+  <view class="m-filter_bar">
+    <view class="m-filter_bar__item m-filter_bar__item--current">风格</view>
+    <view class="m-filter_bar__item">户型</view>
+  </view>
+</view>
+
+
+<view class="g-fixbottom">
+  <view class="m-switch">
+    <view class="m-switch__item">家装</view>
+    <view class="m-switch__item">工装</view>
+  </view>
+</view>

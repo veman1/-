@@ -17,7 +17,7 @@
   </view>
 </view>
 
-<view class="g-slider">
+<view class="g-slider bg-black">
   <swiper class="m-slider" circular>
     <block wx:for="{{ '    ' }}">
       <swiper-item>
@@ -27,6 +27,93 @@
   </swiper>
 </view>
 
-<view class="g-services">
-  <image class="full-width" mode="widthFix" src="/images/public_services.png" />
+<view class="g-nav">
+  <view class="m-nav">
+    <block wx:for="{{ config.nav_list }}">
+      <navigator class="m-nav__item" hover-class='none' url="{{item.url}}" open-type="{{item.open_type}}">
+        <image mode="aspectFit" src="{{item.img}}" />
+        <text>{{item.text}}</text>
+      </navigator>
+    </block>
+  </view>
+</view>
+
+<view class="g-category bg-black margin-top">
+  <view class="padding flex content-between">
+    <text>装修案例</text>
+    <navigator hover-class='none' open-type='switchTab' url="/pages/case_list/case_list">更多></navigator>
+  </view>
+  <scroll-view class="padding-bottom no-wrap" scroll-x>
+    <view class="g-category_item margin-right">
+      <view class="m-cat_box">
+        <image src="/images/index_category_home.jpg" />
+        <text class="border-top border-bottom border-white">家装案例</text>
+      </view>
+    </view>
+    <view class="g-category_item margin-right">
+      <view class="m-cat_box">
+        <image src="/images/index_category_work.jpg" />
+        <text class="border-top border-bottom border-white">工装案例</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+<view class="g-companies margin-top bg-black">
+  <view class="padding">企业展示</view>
+  <scroll-view class="no-wrap" scroll-x>
+    <view class="g-com-cat-item" bindtap="tapCompanyCategory" data-current="{{ 0 }}">
+      <view class="m-cat_box {{ ccurrent === 0 ? 'm-cat_box--current' : '' }}">
+        <image src="/images/index_com_soft.jpg" />
+        <text>软装配饰</text>
+        <i/>
+      </view>
+    </view>
+    <view class="g-com-cat-item" bindtap="tapCompanyCategory" data-current="{{ 1 }}">
+      <view class="m-cat_box {{ ccurrent === 1 ? 'm-cat_box--current' : '' }}">
+        <image src="/images/index_com_decoration.jpg" />
+        <text>装企联盟</text>
+        <i/>
+      </view>
+    </view>
+    <view class="g-com-cat-item" bindtap="tapCompanyCategory" data-current="{{ 2 }}">
+      <view class="m-cat_box {{ ccurrent === 2 ? 'm-cat_box--current' : '' }}">
+        <image src="/images/index_com_building.jpg" />
+        <text>品牌建材</text>
+        <i/>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="g-com_list flex flex-wrap">
+    <view class="g-com_item" wx:for="{{ '        ' }}">
+      <view class="m-com_item">
+        <image src="/images/test/google.jpg" />
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="g-case_list">
+  <view wx:for="{{ '    ' }}" class="g-case_item">
+    <view class="m-case_item_big">
+      <view class="m-case_item_big__imgbox">
+        <image src="/images/test/ad.png" />
+        <view class="m-case_item_big__titlebox">
+          <text>潮系·都市新贵</text>
+          <view>大气端庄，集中体现了绿色设计、环保设计、可持续发展设计的理念</view>
+        </view>
+      </view>
+      <view class="m-case_item_big__foot">
+        <text>2888元/m²</text>
+        <view>
+          <image src="/images/case_item_safe.png" />
+          <text>5年质保</text>
+        </view>
+        <view>
+          <image src="/images/case_item_calendar.png" />
+          <text>60天工期</text>
+        </view>
+      </view>
+    </view>
+  </view>
 </view>

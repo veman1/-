@@ -1,0 +1,28 @@
+page {
+  padding: 180rpx 0 0;
+}
+
+.g-fixtop {
+  position: fixed;
+  top: 0;
+  width: 750rpx;
+  height: 90rpx;
+  box-sizing: border-box;
+  background-color: #000;
+  border-bottom: 1px solid #333;
+}
+.g-fixtop2 {
+  position: fixed;
+  top: 90rpx;
+  width: 750rpx;
+  height: 90rpx;
+  box-sizing: border-box;
+  background-color: #000;
+}
+
+.g-fixbottom {
+  position: fixed;
+  bottom: 40rpx;
+  left: 50%;
+  transform: translate(-50%, 0)
+}
