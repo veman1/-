@@ -1,66 +1,54 @@
-// pages/case_index/case_index.js
+import config from 'case_index_config'
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
+    mode: 'set',
+    type: 0,
+    scrollbar: 0,
+    scrollbar_list: config.scrollbar_list,
+    style_list: config.style_list,
+    house_type_list: config.house_type_list,
+    filter: {
+      current: 0,
+      lists: [config.style_list, config.house_type_list],
+    },
+  },
+  tapTabbar(e) {
+    this.setData({
+      mode: e.currentTarget.dataset.mode
+    })
+    this.fetchData(e.currentTarget.dataset.mode)
+  },
+  tapScrollbar(e) {
+    this.setData({ scrollbar: e.currentTarget.dataset.index })
+    this.fetchData(e.currentTarget.dataset.id)
+  },
+  tapSwitch(e) {
+    this.setData({
+      type: e.currentTarget.dataset.type
+    })
+  },
+  tapFilterbar(e) {
+    if (this.data.filter.current === e.currentTarget.dataset.list) {
+      this.setData({
+        'filter.current': null
+      })
+    } else {
+      this.setData({
+        'filter.current': e.currentTarget.dataset.list
+      })
+    }
+  },
+  filterChange(e) {
+    this.data.filter.lists[this.data.filter.current].forEach((v, i, f) => f[i].check = !1)
+    e.detail.value.forEach(i => this.data.filter.lists[this.data.filter.current][i].check = !0)
+    this.setData({ filter: this.data.filter })
+  },
+  maskTap(e) {
+    this.setData({
+      'filter.current': null
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
+  fetchData() { },
 })

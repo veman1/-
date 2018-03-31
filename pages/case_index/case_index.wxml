@@ -1,21 +1,48 @@
 <view class="g-fixtop">
-  <view class="m-tabbar">
-    <view class="m-tabbar__item m-tabbar__item--current">套图</view>
-    <view class="m-tabbar__item">单图</view>
+  <view class="m-tabbar" hidden="{{ type !== 0 }}">
+    <view class="m-tabbar__item {{ mode === 'set' ? 'm-tabbar__item--current' : '' }}" bindtap="tapTabbar" data-mode="set">套图</view>
+    <view class="m-tabbar__item {{ mode === 'single' ? 'm-tabbar__item--current' : '' }}" bindtap="tapTabbar" data-mode="single">单图</view>
   </view>
+  <scroll-view class="m-scrollbar" scroll-x hidden="{{ type !== 1 }}">
+    <block wx:for="{{ scrollbar_list }}">
+      <view class="m-scrollbar__item {{ scrollbar === index ? 'm-scrollbar__item--current' : '' }}" bindtap="tapScrollbar" data-index="{{ index }}" data-id="">{{ item.text }}</view>
+    </block>
+  </scroll-view>
 </view>
 
 <view class="g-fixtop2">
   <view class="m-filter_bar">
-    <view class="m-filter_bar__item m-filter_bar__item--current">风格</view>
-    <view class="m-filter_bar__item">户型</view>
+    <view class="m-filter_bar__item {{ filter.current === 0 ? 'm-filter_bar__item--current' : '' }}" bindtap="tapFilterbar" data-list="{{ 0 }}">风格</view>
+    <view class="m-filter_bar__item {{ filter.current === 1 ? 'm-filter_bar__item--current' : '' }}" bindtap="tapFilterbar" data-list="{{ 1 }}">空间</view>
   </view>
 </view>
 
+<view class="g-dropdown" hidden="{{ !dropdown }}">
+  <view hidden="{{ filter.current === null }}" class="m-mask" bindtap="maskTap" />
+  <checkbox-group class="g-filter_list" bindchange="filterChange">
+    <block wx:for="{{ filter.lists[filter.current] }}">
+      <label class="g-filter_item {{ item.check ? 'g-filter_item--check' : '' }}">
+        <checkbox value="{{ index }}" checked="{{ item.check }}" hidden/>
+        <view>{{ item.text }}</view>
+      </label>
+    </block>
+  </checkbox-group>
+</view>
 
-<view class="g-fixbottom">
+<view class="g-list">
+  <block wx:for="{{ '        ' }}">
+    <view class="g-item">
+      <view class="m-case_item_normal">
+        <image src="/images/test/ad.png" />
+        <view>蔚蓝海洋·现代美式·现代美式·现代美式</view>
+      </view>
+    </view>
+  </block>
+</view>
+
+<view class="g-floatbottom">
   <view class="m-switch">
-    <view class="m-switch__item">家装</view>
-    <view class="m-switch__item">工装</view>
+    <view class="m-switch__item {{ type === 0 ? 'm-switch__item--current' : '' }}" bindtap="tapSwitch" data-type="{{ 0 }}">家装</view>
+    <view class="m-switch__item {{ type === 1 ? 'm-switch__item--current' : '' }}" bindtap="tapSwitch" data-type="{{ 1 }}">工装</view>
   </view>
 </view>

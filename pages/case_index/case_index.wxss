@@ -1,3 +1,7 @@
+switch {
+  transform: scale(.5)
+}
+
 page {
   padding: 180rpx 0 0;
 }
@@ -11,6 +15,7 @@ page {
   background-color: #000;
   border-bottom: 1px solid #333;
 }
+
 .g-fixtop2 {
   position: fixed;
   top: 90rpx;
@@ -20,9 +25,55 @@ page {
   background-color: #000;
 }
 
-.g-fixbottom {
+.g-dropdown {
+  position: fixed;
+  z-index: 99;
+  top: 180rpx;
+  width: 750rpx;
+}
+
+.g-filter_list {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20rpx 0 0 37.5rpx;
+  background-color: #3a3a3a;
+}
+.g-filter_item {
+  width: 200rpx;
+  margin: 0 37.5rpx 30rpx 0;
+  background-color: #1B1B1B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.g-filter_item--check {
+  color: #F4CF1F;
+  border-color: #F4CF1F;
+}
+
+.g-list {
+  margin: 20rpx 0 0;
+  padding: 0 20rpx 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.g-item {
+  margin: 0 0 20rpx;
+}
+
+.g-floatbottom {
   position: fixed;
   bottom: 40rpx;
   left: 50%;
   transform: translate(-50%, 0)
+}
+
+.u-button {
 }
