@@ -1,0 +1,8 @@
+<view class='g-container'>
+  <image mode="widthFix" src="{{ img }}" />
+  <view wx:for="{{ tags }}" style="top: {{ item.top }}%; left: {{ item.left }}%" bindtap="showDetail" data-goods-id="{{ item.goods_id }}" />
+</view>
+
+<view class="g-fixbottom">
+  <navigator class="u-button-plain" hover-class='none' />
+</view>

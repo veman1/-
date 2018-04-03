@@ -1,0 +1,48 @@
+<view class="g-banner">
+  <image mode="aspectFill" src="{{ banner }}" />
+</view>
+
+<view class="g-main">
+  <picker mode="region" bindchange="change" data-name="city">
+    <view class="m-box ft-arrow {{ !city ? 'empty_city' : '' }}">{{ city }}</view>
+  </picker>
+
+  <input class="m-box ft-size" placeholder-class='m-box--placeholder' placeholder='请输入您的房屋面积' type="digit" bindinput="change" data-name="size" maxlength='8' />
+
+  <view class="g-flex">
+    <picker class="g-flex__item" range="{{ roomRange }}" bindchange="change" data-name="room">
+      <view class="m-box ft-arrow">{{ roomRange[room] }}</view>
+    </picker>
+    <picker class="g-flex__item" range="{{ drawingroomRange }}" bindchange="change" data-name="drawingroom">
+      <view class="m-box ft-arrow">{{ drawingroomRange[drawingroom] }}</view>
+    </picker>
+  </view>
+
+  <view class="g-flex">
+    <picker class="g-flex__item" range="{{ kitchenRange }}" bindchange="change" data-name="kitchen">
+      <view class="m-box ft-arrow">{{ kitchenRange[kitchen] }}</view>
+    </picker>
+    <picker class="g-flex__item" range="{{ toiletRange }}" bindchange="change" data-name="toilet">
+      <view class="m-box ft-arrow">{{ toiletRange[toilet] }}</view>
+    </picker>
+    <picker class="g-flex__item" range="{{ balconyRange }}" bindchange="change" data-name="balcony">
+      <view class="m-box ft-arrow">{{ balconyRange[balcony] }}</view>
+    </picker>
+  </view>
+
+  <input class="m-box" placeholder-class='m-box--placeholder' placeholder='输入号码，报价结果将发送到您的手机' type="number" bindinput="change" data-name="phone" maxlength='11' />
+
+  <view class="u-button" bindtap="tapCal">立即计算</view>
+</view>
+
+<view class="g-result" wx:if="{{ result }}">
+  <view class="m-result">
+    <view class="m-result__title">{{ total || '0' }}元</view>
+    <view class="m-result__content">
+      <view class="m-result__item">人工费：{{ labor || '0' }}元</view>
+      <view class="m-result__item">材料费：{{ meterial || '0' }}元</view>
+      <view class="m-result__item">设计费：{{ design || '0' }}元</view>
+      <view class="m-result__item">质检费：{{ testing || '0' }}元</view>
+    </view>
+  </view>
+</view>

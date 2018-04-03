@@ -1,0 +1,12 @@
+<view class="g-intro">{{ intro }}</view>
+<view class="g-banner">
+  <image mode="widthFix" src="{{ banner }}" />
+</view>
+<view class="g-product">
+  <view class="g-product__list">
+    <view class="m-product_item" wx:for="{{ products }}">
+      <image src="{{ item.img }}" />
+      <text>{{ item.name }}</text>
+    </view>
+  </view>
+</view>

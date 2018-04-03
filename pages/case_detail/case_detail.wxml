@@ -1,0 +1,11 @@
+<view class="g-main">
+  <swiper circular bindchange="change">
+    <swiper-item wx:for="{{ gallery }}">
+      <image src="{{ item.img }}" />
+    </swiper-item>
+  </swiper>
+  <view>{{ current + 1 || 0 }}/{{ gallery.length }}</view>
+  <text>{{ gallery[current || 0].name }}</text>
+</view>
+
+<navigator class="g-footer" hover-class='none' url="/pages/book/book?goodsId={{ goods_id }}" />

@@ -1,0 +1,33 @@
+<view class="g-banner">
+  <image src="{{ img }}" />
+</view>
+
+<view class="g-title">
+  <text>{{ gname }}</text>
+  <view>{{ sname }}</view>
+</view>
+
+<view class="g-content">
+  <view class="g-content__intro">{{ intro }}</view>
+  <view class="g-content__detail">
+    <view>品牌
+      <text>{{ sname }}</text>
+    </view>
+
+    <view>尺寸
+      <text>{{ size }}</text>
+    </view>
+
+    <view>材质
+      <text>{{ meterial }}</text>
+    </view>
+
+    <view>颜色
+      <text>{{ color }}</text>
+    </view>
+
+    <view>单位
+      <text>{{ unit }}</text>
+    </view>
+  </view>
+</view>

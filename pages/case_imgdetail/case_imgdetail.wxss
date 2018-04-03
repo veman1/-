@@ -1,0 +1,48 @@
+
+page {
+  padding: 0 0 98rpx;
+}
+
+.g-container {
+  position: relative;
+}
+.g-container image {
+  display: block;
+  width: 100%;
+  height: 0;
+}
+.g-container view {
+  position: absolute;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC0ElEQVR4nOWbW3LTMBSGfzWe8mLemQGSLKFmA3V3wA7oDhpW0uwAugKWULMCsYOSDqwAM7xgxIMbJriNrXN0dLH9vWUSWZrPR7cjRaHDL/1i3eB0A6hzAGfd71kY7KBMZfDn4/PiWyXyTCHU4YdaL7eAuvJbpbnJi/tLv3XY809ArVe3AMow1aYjQQFArZfXgNqErToNCart88/u4lQfX0LW4NRzn+9Dvav1EjElZIAqY1XeEleCqvXKxKj4MXG6Q0Yu0c7pW6Cp8uL7FwCo9cszYFE+TKFrXlPiRAIxAsz7vLjf9v2i1ssNoK75TQobCdYCDJoL21XcT/36rcHJJ36zwkmwFDD85rvUenkFKFKZTp1BJAwLMNjlb3ZrzsNrvboDe0wAQkgYHgSVcXmLW7co8D8wWswCTcV/fPOZM9H8j18Jg10gL3aq7/sh5NYZfrqD6+sJiJ9IsJgFfhf7BQ+VdoGUaU7Z48hGgkUELEoALAHA4pxXrg/ZSEh8GuxDJhISXgjZ4C6BsBewHwv89P1juElIcDPEgS+Bng/wth12hSchoYSIBHQJGYCviPbWpKFPkRlgKkBZF0gfmgT1Q78qFRa3nlsVAbvusD8Y+TCtKNgzLOHgaGyeErqHo7OT8GivPzcJTyY75iThaLZnLhJ6011zkDCY75u6BKuE51QlGDQX1hnfaUowN6SU9+QkGNBz/lOTwDr0mJIE9qnPJCRwusAh45dAHASfYswSSNNgH+OUQFgI2TAuCYSlMIVxSCBshjikLYGwHXYhTQmEhIgEaUkgpMQkSUMCISnqg7gSCGlxn8SRQDgYCUFYCfaHpMEEAKEk0E6IgwoAfEugH48HFwD4ksC8ICHbCHtkJThckZFpAA8ZCY6XpNwqd8dNgsA1OZfCUvAkCF2UdH2AFDQJcveFkxEA2EqQvSydlAAAaO8snVw+/H1/DcDr3+//AjexyASNVYoBAAAAAElFTkSuQmCC);
+  width: 60rpx;
+  height: 60rpx;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.g-fixbottom {
+  width: 100%;
+  height: 98rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .35)
+}
+
+.u-button-plain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  height: 3em;
+  width: 380rpx;
+  color: #fff;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+}
+.u-button-plain:before {
+  content: '预约免费设计'
+}
