@@ -264,3 +264,13 @@ page {
   height: 100vh;
   background-color: rgba(0, 0, 0, .5)
 }
+
+.m-submit_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
+  width: 100%;
+  background-color: #F4CF1F;
+  border-radius: 4px;
+}

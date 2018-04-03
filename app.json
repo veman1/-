@@ -1,7 +1,12 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/case_index/case_index"
+    "pages/case_index/case_index",
+    "pages/company_detail/company_detail",
+    "pages/case_detail/case_detail",
+    "pages/book/book",
+    "pages/case_imgdetail/case_imgdetail",
+    "pages/goods_detail/goods_detail"
   ],
   "window": {
     "navigationBarBackgroundColor": "#F4CF1F",

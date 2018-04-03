@@ -9,7 +9,6 @@ Page({
     style_list: config.style_list,
     house_type_list: config.house_type_list,
     filter: {
-      current: 0,
       lists: [config.style_list, config.house_type_list],
     },
   },

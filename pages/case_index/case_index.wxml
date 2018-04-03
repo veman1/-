@@ -17,7 +17,7 @@
   </view>
 </view>
 
-<view class="g-dropdown" hidden="{{ !dropdown }}">
+<view class="g-dropdown" hidden="{{ filter.current !== 0 && filter.current !== 1 }}">
   <view hidden="{{ filter.current === null }}" class="m-mask" bindtap="maskTap" />
   <checkbox-group class="g-filter_list" bindchange="filterChange">
     <block wx:for="{{ filter.lists[filter.current] }}">
