@@ -29,7 +29,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 9,
 			"list": [
 				{
 					"id": -1,
@@ -64,7 +64,31 @@
 				{
 					"id": -1,
 					"name": "商品详情",
-					"pathName": "pages/goods_detail/goods_detail"
+					"pathName": "pages/goods_detail/goods_detail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/usercenter/usercenter",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "意见反馈",
+					"pathName": "pages/feedback/feedback",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "关于我们",
+					"pathName": "pages/aboutus/aboutus",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "三免",
+					"pathName": "pages/favour_free/favour_free"
 				}
 			]
 		}

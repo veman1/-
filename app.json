@@ -6,7 +6,11 @@
     "pages/case_detail/case_detail",
     "pages/book/book",
     "pages/case_imgdetail/case_imgdetail",
-    "pages/goods_detail/goods_detail"
+    "pages/goods_detail/goods_detail",
+    "pages/usercenter/usercenter",
+    "pages/feedback/feedback",
+    "pages/aboutus/aboutus",
+    "pages/favour_free/favour_free"
   ],
   "window": {
     "navigationBarBackgroundColor": "#F4CF1F",

@@ -1,0 +1,5 @@
+<textarea placeholder-style='{{ phStyle }}' bindinput="{{ bindinput }}" maxlength="{{ maxlength }}" placeholder="{{ placeholder }}">
+  <text>{{ value.length || 0 }}/{{ maxlength }}</text>
+</textarea>
+
+<view bindtap="submit" />

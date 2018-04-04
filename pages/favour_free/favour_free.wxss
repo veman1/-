@@ -1,0 +1,81 @@
+@import 'favour_free_banner';
+.g-section {
+  background-color: inherit;
+}
+.g-section title {
+  position: relative;
+  display: block;
+  border: 2px solid #F4CF1F;
+  width: 540rpx;
+  height: 60rpx;
+  box-sizing: border-box;
+  margin: 45rpx auto 70rpx;
+  background-color: inherit;
+}
+.g-section title:before {
+  position: absolute;
+  top: -.7em;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: #F4CF1F;
+  background-color: inherit;
+  padding: 0 1em;
+  font-size: 36rpx;
+}
+.g-section_design title:before { content: '免费设计'; }
+.g-section_test title:before { content: '免费验房'; }
+.g-section_cal title:before { content: '免费预算'; }
+.g-section title:after {
+  content: '';
+  position: absolute;
+  bottom: -22rpx;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-top: 40rpx solid #F4CF1F;
+  border-left: 40rpx solid transparent;
+  border-right: 40rpx solid transparent;
+}
+
+
+.m-box {
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 3px;
+  background-color: #fff;
+  height: 110rpx;
+  width: 690rpx;
+  margin: 0 auto 30rpx;
+  padding: 0 25rpx;
+  display: flex;
+  align-items: center;
+  color: #464646;
+}
+.m-box--empty { color: #b6b6b6; }
+.m-box.ft-arrow { padding-right: 70rpx;}
+.m-box.ft-arrow:after {
+  content: '';
+  position: absolute;
+  right: 25rpx;
+  top: 50%;
+  width: .5em;
+  height: .5em;
+  border-left: 1px solid #AAAAAA;
+  border-bottom: 1px solid #AAAAAA;
+  transform-origin: 50% 50%;
+  transform: translate(0, -50%) rotate(-135deg);
+}
+
+submit {
+  width: 690rpx;
+  margin: 60rpx auto 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.7em;
+  background-color: #F4CF1F;
+  border-radius: 4px;
+  color: #000;
+  font-size: 1.1em;
+}
+
+submit:after { content: '立即申请' }

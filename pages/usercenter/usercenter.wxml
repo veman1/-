@@ -1,0 +1,13 @@
+<view class="g-banner">
+  <image src="{{ avatar }}" />
+  <text>{{ uname }}</text>
+</view>
+
+<view class="menu">
+  <block wx:for="{{ menu_list }}">
+    <navigator class="item" url="{{ item.url }}" open-type="{{ item.open_type || 'navigate' }}" hover-class>
+      <image mode="aspectFit" src="{{ item.icon }}" />
+      <text>{{ item.text }}</text>
+    </navigator>
+  </block>
+</view>

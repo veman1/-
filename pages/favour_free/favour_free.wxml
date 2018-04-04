@@ -1,0 +1,15 @@
+<view class="g-section g-section_design">
+  <title />
+  <input class="m-box" placeholder-class='z-lightcolor' placeholder='请输入您的称呼' maxlength='16' bindinput="change" data-name="name" />
+  <input class="m-box" placeholder-class='z-lightcolor' placeholder='请输入手机号码' type="number" maxlength='11' data-name="phone" />
+  <picker mode="region" bindchange="change" data-name="city">
+    <text class="m-box ft-arrow {{ !city ? 'm-box--empty' : '' }}">{{ city || '请选择房屋所在的城市' }}</text>
+  </picker>
+  <submit bindtap="apply" />
+</view>
+<view class="g-section g-section_test">
+  <title />
+</view>
+<view class="g-section g-section_cal">
+  <title />
+</view>
